@@ -104,12 +104,15 @@
         (cond ((> a 0) :positive)
               ((< a 0) :negative)
               (t :zero)))
-  (assert-equal ____ c))
+  (assert-equal :positive c))
 
 
 (defun cartoon-dads (input)
   " you should be able to complete this cond statement"
   (cond ((equal input :this-one-doesnt-happen) :fancy-cat)
+        ((equal input :bart) :homer)
+        ((equal input :stewie) :peter)
+        ((equal input :stan) :randy)
         (t :unknown)))
 
 (define-test test-your-own-cond-statement
