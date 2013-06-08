@@ -102,9 +102,9 @@
 
 (define-test test-list-breakdown
     "car (aka. 'first') returns the first value in a list"
-  (assert-equal ___ (car '(1 2 3)))
-  (assert-equal ___ (car nil))
+  (assert-equal 1 (car '(1 2 3)))
+  (assert-equal nil (car nil))
     "cdr (aka. 'rest') refers to the remainder of the list,
      after the first element"
-  (assert-equal ___ (cdr '(1 2 3)))
-  (assert-equal ___ (cdr nil)))
+  (assert-equal '(2 3) (cdr '(1 2 3)))
+  (assert-equal nil (cdr nil)))
